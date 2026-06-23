@@ -1,0 +1,193 @@
+/* ============================================================
+   Cineteca — Cartelera (Mobile-First, 375px)
+   Estilo crema + serif, igual al diseño de Figma.
+   ============================================================ */
+
+/* ----- 1. Variables de diseño (tokens) ----- */
+:root {
+  --cream: #F4EFE6;     /* Fondo */
+  --ink: #2D2A26;       /* Texto principal */
+  --muted: #8A857C;     /* Texto secundario */
+  --terra: #9E3B3B;     /* Acento terracota */
+  --slate: #3E4953;     /* Tarjeta destacada */
+  --card: #5C7488;      /* Bloques de las películas */
+  --hair: #DCD5C8;      /* Líneas separadoras */
+
+  --space: 20px;        /* Margen lateral */
+  --radius: 16px;       /* Radio de tarjetas */
+  --nav-h: 70px;        /* Alto barra inferior */
+
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+}
+
+/* ----- 2. Reset ----- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--sans);
+  background-color: var(--cream);
+  color: var(--ink);
+  padding-bottom: var(--nav-h);
+  min-height: 100vh;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ----- 3. Encabezado ----- */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px var(--space) 8px;
+}
+
+.brand { display: flex; align-items: center; gap: 8px; }
+.brand__icon { color: var(--terra); }
+.brand__name { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; }
+
+.icon-btn {
+  background: none; border: none; color: var(--ink); cursor: pointer; display: flex;
+}
+
+/* ----- 4. Contenido principal ----- */
+.app-main { padding: 0 var(--space); }
+
+.eyebrow {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.page-title {
+  font-family: var(--serif);
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+/* ----- 5. Película destacada ----- */
+.featured {
+  display: block;
+  position: relative;
+  background-color: var(--slate);
+  border-radius: var(--radius);
+  padding: 20px;
+  min-height: 165px;
+  /* El contenido se ancla abajo (badge y textos) */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fff;
+  margin-bottom: 26px;
+}
+
+.featured__badge {
+  align-self: flex-start;
+  background-color: var(--terra);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.featured__title {
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.featured__meta {
+  font-size: 0.8rem;
+  opacity: 0.85;
+  margin-top: 4px;
+}
+
+/* ----- 6. "También en sala" ----- */
+.section-title {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+/* ----- 7. Grilla de películas (2 columnas) ----- */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.movie-grid__loading {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--muted);
+  padding: 24px 0;
+}
+
+/* ----- 8. Tarjeta de película ----- */
+.movie-card { display: block; }
+
+/* Bloque de color (luego se reemplaza por el póster real) */
+.movie-card__poster {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background-color: var(--card);
+  border-radius: var(--radius);
+  margin-bottom: 8px;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-card__title {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.movie-card__meta {
+  font-size: 0.78rem;
+  color: var(--terra);
+  margin-top: 2px;
+}
+
+/* ----- 9. Barra inferior ----- */
+.bottom-nav {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  display: flex;
+  background-color: var(--cream);
+  border-top: 1px solid var(--hair);
+}
+
+.nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.nav-item--active { color: var(--terra); }
+
+/* ----- 10. Accesibilidad ----- */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--terra);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* ----- 11. Pantallas más anchas (opcional) ----- */
+@media (min-width: 600px) {
+  .app-header, .app-main, .bottom-nav {
+    max-width: 480px;
+    margin-inline: auto;
+  }
+}
