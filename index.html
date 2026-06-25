@@ -4,105 +4,80 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cineteca | Cartelera</title>
-
-  <!-- Tipografías-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- ====== ENCABEZADO ====== -->
-  <header class="app-header">
-    <div class="brand">
-      <!-- Icono de film (terracota) -->
-      <svg class="brand__icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="3" y="4" width="18" height="16" rx="2"></rect>
-        <path d="M3 9h18M3 14h18M8 4v16M16 4v16"></path>
-      </svg>
-      <span class="brand__name">Cineteca</span>
+  <!-- Encabezado -->
+  <header class="encabezado">
+    <div class="marca">
+      <!-- aquí va el icono: <img src="img/cine.png" width="24"> -->
+      <span class="marca_nombre">Cineteca</span>
     </div>
-
-    <!-- Botón de filtros -->
-    <button class="icon-btn" type="button" aria-label="Filtrar películas">
-      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M4 7h10M18 7h2M4 12h2M10 12h10M4 17h7M15 17h5"></path>
-        <circle cx="16" cy="7" r="2"></circle><circle cx="8" cy="12" r="2"></circle><circle cx="13" cy="17" r="2"></circle>
-      </svg>
+    <button class="boton_filtro" type="button">
+      <!-- aquí va el icono: <img src="img/filtro.png" width="22"> -->
     </button>
   </header>
 
-  <!--PRINCIPAL-->
-  <main class="app-main">
-    <p class="eyebrow">Lunes 15 de junio</p>
-    <h1 class="page-title">En cartelera</h1>
+  <!-- Contenido principal -->
+  <main class="principal">
+    <p class="fecha">Lunes 15 de junio</p>
+    <h1 class="titulo_pagina">En cartelera</h1>
 
     <!-- Película destacada -->
-    <a href="detalle.html?id=1" class="featured" aria-label="Ver Marea negra">
-      <span class="featured__badge">Estreno</span>
-      <h2 class="featured__title">Marea negra</h2>
-      <p class="featured__meta">Drama &middot; 2h 04 &middot; 18:30 / 21:00</p>
+    <a href="detalle.html" class="destacada">
+      <span class="destacada_etiqueta">Estreno</span>
+      <h2 class="destacada_titulo">Marea negra</h2>
+      <p class="destacada_datos">Drama · 2h 04 · 18:30 / 21:00</p>
     </a>
 
-    <!-- Resto de películas -->
-    <section class="also" aria-labelledby="also-title">
-      <h2 id="also-title" class="section-title">También en sala</h2>
+    <!-- También en sala -->
+    <section class="tambien">
+      <h2 class="titulo_seccion">También en sala</h2>
 
-      <div class="movie-grid" role="list">
+      <div class="grilla">
 
-        <!-- Tarjeta 1 -->
-        <a href="detalle.html?id=2" class="movie-card" role="listitem">
-          <div class="movie-card__poster"></div>
-          <h3 class="movie-card__title">El faro</h3>
-          <p class="movie-card__meta">Misterio &middot; 1h 49</p>
+        <a href="detalle.html" class="tarjeta">
+          <!-- aquí va el póster: <img src="img/el-faro.jpg" class="tarjeta_poster"> -->
+          <div class="tarjeta_poster"></div>
+          <h3 class="tarjeta_titulo">El faro</h3>
+          <p class="tarjeta_datos">Misterio · 1h 49</p>
         </a>
 
-        <!-- Tarjeta 2 -->
-        <a href="detalle.html?id=3" class="movie-card" role="listitem">
-          <div class="movie-card__poster"></div>
-          <h3 class="movie-card__title">Noche en vela</h3>
-          <p class="movie-card__meta">Drama &middot; 1h 58</p>
+        <a href="detalle.html" class="tarjeta">
+          <div class="tarjeta_poster"></div>
+          <h3 class="tarjeta_titulo">Noche en vela</h3>
+          <p class="tarjeta_datos">Drama · 1h 58</p>
         </a>
 
-        <!-- Tarjeta 3 -->
-        <a href="detalle.html?id=4" class="movie-card" role="listitem">
-          <div class="movie-card__poster"></div>
-          <h3 class="movie-card__title">Cielo abierto</h3>
-          <p class="movie-card__meta">Aventura &middot; 2h 11</p>
+        <a href="detalle.html" class="tarjeta">
+          <div class="tarjeta_poster"></div>
+          <h3 class="tarjeta_titulo">Cielo abierto</h3>
+          <p class="tarjeta_datos">Aventura · 2h 11</p>
         </a>
 
-        <!-- Tarjeta 4 -->
-        <a href="detalle.html?id=5" class="movie-card" role="listitem">
-          <div class="movie-card__poster"></div>
-          <h3 class="movie-card__title">El último tren</h3>
-          <p class="movie-card__meta">Suspenso &middot; 1h 42</p>
+        <a href="detalle.html" class="tarjeta">
+          <div class="tarjeta_poster"></div>
+          <h3 class="tarjeta_titulo">El último tren</h3>
+          <p class="tarjeta_datos">Suspenso · 1h 42</p>
         </a>
 
       </div>
     </section>
   </main>
 
-  <!-- ====== NAVEGACIÓN INFERIOR ====== -->
-  <nav class="bottom-nav" aria-label="Navegación principal">
-    <a href="index.html" class="nav-item nav-item--active">
-      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="3" y="4" width="18" height="16" rx="2"></rect>
-        <path d="M3 9h18M3 14h18M8 4v16M16 4v16"></path>
-      </svg>
+  <!-- Barra inferior -->
+  <nav class="barra_inferior">
+    <a href="index.html" class="opcion opcion_activa">
+      <!-- aquí va el icono: <img src="img/cine.png" width="22"> -->
       <span>Cartelera</span>
     </a>
-    <a href="#" class="nav-item">
-      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path>
-      </svg>
+    <a href="#" class="opcion">
+      <!-- aquí va el icono: <img src="img/buscar.png" width="22"> -->
       <span>Buscar</span>
     </a>
-    <a href="#" class="nav-item">
-      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path>
-      </svg>
+    <a href="#" class="opcion">
+      <!-- aquí va el icono: <img src="img/perfil.png" width="22"> -->
       <span>Perfil</span>
     </a>
   </nav>
