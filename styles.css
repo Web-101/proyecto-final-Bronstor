@@ -81,12 +81,14 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 165px;
-  padding: 20px;
+  min-height: 200px;
+  padding: 18px;
   border-radius: 16px;
   margin-bottom: 26px;
   color: #fff;
   background-color: #3E4953;
+  background-size: cover;
+  background-position: center;
 }
 
 .destacada_etiqueta {
