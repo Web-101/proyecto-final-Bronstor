@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "titulo": "Marea negra",
+    "genero": "Drama",
+    "duracion": "2h 04",
+    "sinopsis": "Tras una marea inusual, un pueblo costero descubre un secreto enterrado bajo el mar que cambiará sus vidas para siempre.",
+    "poster": "img/Marea_Negra_Portada.png",
+    "funciones": ["18:30", "21:00"]
+  },
+  {
+    "id": 2,
+    "titulo": "El faro",
+    "genero": "Misterio",
+    "duracion": "1h 49",
+    "sinopsis": "Dos fareros quedan atrapados en una isla remota mientras la cordura empieza a desvanecerse.",
+    "poster": "img/El_faro_cartelera.png",
+    "funciones": ["17:00", "19:15", "21:30"]
+  },
+  {
+    "id": 3,
+    "titulo": "Noche en vela",
+    "genero": "Drama",
+    "duracion": "1h 58",
+    "sinopsis": "Una enfermera del turno nocturno enfrenta la noche más larga de su carrera.",
+    "poster": "img/Noche_en_vela_cartelera.png",
+    "funciones": ["18:00", "20:30"]
+  },
+  {
+    "id": 4,
+    "titulo": "Cielo abierto",
+    "genero": "Aventura",
+    "duracion": "2h 11",
+    "sinopsis": "Un grupo de pilotos cruza territorios inexplorados en busca de una ciudad perdida.",
+    "poster": "img/Cielo_abierto_cartelera.png",
+    "funciones": ["16:45", "19:30", "22:15"]
+  },
+  {
+    "id": 5,
+    "titulo": "El último tren",
+    "genero": "Suspenso",
+    "duracion": "1h 42",
+    "sinopsis": "En el último tren de la noche, los pasajeros descubren que no están solos.",
+    "poster": "img/El_ultimo_tren_cartelera.png",
+    "funciones": ["18:30", "20:45", "22:50"]
+  }
+]

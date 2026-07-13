@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cineteca | Compra</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="barra_volver">
+    <a href="detalle.html" class="flecha">←</a>
+  </div>
+
+  <div class="bloque">
+    <h1 class="titulo_detalle">Tu compra</h1>
+
+    <div class="resumen_pedido">
+      <div class="linea_pedido"><span>Película</span><span id="r_pelicula">—</span></div>
+      <div class="linea_pedido"><span>Función</span><span id="r_funcion">—</span></div>
+      <div class="linea_pedido"><span>Asientos</span><span id="r_asientos">—</span></div>
+      <div class="linea_pedido linea_total"><span>Total</span><span id="r_total">—</span></div>
+    </div>
+
+    <p class="etiqueta_funciones">Tus datos</p>
+
+    <form id="form_compra" class="form_compra">
+      <input type="text" id="nombre" class="campo" placeholder="Nombre completo" required>
+      <input type="email" id="correo" class="campo" placeholder="Correo electrónico" required>
+      <input type="tel" id="telefono" class="campo" placeholder="Teléfono (opcional)">
+      <button type="submit" class="boton_continuar">Finalizar compra</button>
+    </form>
+  </div>
+
+  <script src="js/formulario.js"></script>
+</body>
+</html>
